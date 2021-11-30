@@ -1,0 +1,44 @@
+{eyou:eq name='$data.transaction_type' value='2'}
+<li class="text-xs-center pay-order-zhifubao" data-toggle="modal" data-target="#pay-order-modal">
+    <a class="block cover pay-online" href="JavaScript:void(0);" id="BalancePayment" onclick="BalancePayment();">
+        余额支付
+    </a>
+    拥有余额：{$users.users_money}
+</li>
+{/eyou:eq}
+
+<li class="text-xs-center pay-order-zhifubao" data-toggle="modal" data-target="#pay-order-modal">
+{eyou:empty name="$is_open_alipay"}
+    {eyou:empty name='$isbrowser'}
+        <a class="block cover pay-online" href="JavaScript:void(0);" onclick="UpdateMethod('alipay','{$alipay_url}');">
+            <img src="{eyou:global name='web_templets_pc' /}/users/skin/images/payOnline_zfb.png" class="img-fluid inline-block">
+        </a>
+    {eyou:else /}
+        <a class="block cover pay-online" href="JavaScript:void(0);" onclick="UpdateMethod('alipay');">
+            <img src="{eyou:global name='web_templets_pc' /}/users/skin/images/payOnline_zfb.png" class="img-fluid inline-block">
+        </a>
+    {/eyou:empty}
+{eyou:else/}
+    <a class="block cover pay-online" href="JavaScript:void(0);" onclick="UpdateMethod('alipay','','','','','{$AlipayMsg}');" >
+        <img src="{eyou:global name='web_templets_pc' /}/users/skin/images/payOnline_zfb.png" class="img-fluid inline-block">
+    </a>
+{/eyou:empty}
+</li>
+
+<li>
+{eyou:empty name="$is_open_wechat"}
+    {eyou:empty name='$isweixin'}
+        <a class="block cover pay-online" href="JavaScript:void(0);" onclick="UpdateMethod('wechat','','{$data.unified_id}','{$data.unified_number}','{$data.transaction_type}');">
+            <img src="{eyou:global name='web_templets_pc' /}/users/skin/images/weixinpay.png" class="img-fluid inline-block">
+        </a>
+    {eyou:else /}
+         <a class="block cover pay-online" href="JavaScript:void(0);" onclick="UpdateMethod('wechat','{$weixin_url}');" >
+            <img src="{eyou:global name='web_templets_pc' /}/users/skin/images/weixinpay.png" class="img-fluid inline-block">
+        </a>
+    {/eyou:empty}
+{eyou:else/}
+    <a class="block cover pay-online" href="JavaScript:void(0);" onclick="UpdateMethod('wechat','','','','','{$WechatMsg}');" >
+        <img src="{eyou:global name='web_templets_pc' /}/users/skin/images/weixinpay.png" class="img-fluid inline-block">
+    </a>
+{/eyou:empty}
+</li>

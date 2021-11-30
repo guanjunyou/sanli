@@ -1,0 +1,7 @@
+﻿[01-11-21 16:49:47] info: Program: Starting Squirrel Updater: --createShortcut GitHubDesktop.exe -l StartMenu,Desktop
+[01-11-21 16:49:47] info: ApplyReleasesImpl: About to create shortcuts for GitHubDesktop.exe, rootAppDir C:\Users\ian\AppData\Local\GitHubDesktop
+[01-11-21 16:49:48] info: ApplyReleasesImpl: Creating shortcut for GitHubDesktop.exe => C:\Users\ian\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\GitHub, Inc.\GitHub Desktop.lnk
+[01-11-21 16:49:48] info: ApplyReleasesImpl: About to save shortcut: C:\Users\ian\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\GitHub, Inc.\GitHub Desktop.lnk (target C:\Users\ian\AppData\Local\GitHubDesktop\GitHubDesktop.exe, workingDir C:\Users\ian\AppData\Local\GitHubDesktop\app-2.9.4, args , toastActivatorCSLID 27d44d0c-a542-5b90-bcdb-ac3126048ba2)
+[01-11-21 16:49:48] info: ApplyReleasesImpl: Creating shortcut for GitHubDesktop.exe => C:\Users\ian\Desktop\GitHub Desktop.lnk
+[01-11-21 16:49:48] info: ApplyReleasesImpl: About to save shortcut: C:\Users\ian\Desktop\GitHub Desktop.lnk (target C:\Users\ian\AppData\Local\GitHubDesktop\GitHubDesktop.exe, workingDir C:\Users\ian\AppData\Local\GitHubDesktop\app-2.9.4, args , toastActivatorCSLID 27d44d0c-a542-5b90-bcdb-ac3126048ba2)
+[01-11-21 16:49:48] info: Program: Finished Squirrel Updater

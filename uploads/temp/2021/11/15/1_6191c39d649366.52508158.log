@@ -1,0 +1,12 @@
+﻿[01-11-21 16:49:49] info: Program: Starting Squirrel Updater: --checkForUpdate https://central.github.com/api/deployments/desktop/desktop/latest?version=2.9.4&env=production
+[01-11-21 16:49:49] info: Program: Fetching update information, downloading from https://central.github.com/api/deployments/desktop/desktop/latest?version=2.9.4&env=production
+[01-11-21 16:49:50] info: CheckForUpdateImpl: Generated new staging user ID: 6824a971-a37b-5e93-b18f-abc409a0a7d7
+[01-11-21 16:49:50] info: CheckForUpdateImpl: Downloading RELEASES file from https://central.github.com/api/deployments/desktop/desktop/latest?version=2.9.4&env=production
+[01-11-21 16:49:50] info: FileDownloader: Downloading url: https://central.github.com/api/deployments/desktop/desktop/latest/RELEASES?version=2.9.4&env=production&id=GitHubDesktop&localVersion=2.9.4&arch=amd64
+[01-11-21 16:49:51] info: Program: Finished Squirrel Updater
+[01-11-21 16:55:07] info: Program: Starting Squirrel Updater: --checkForUpdate https://central.github.com/api/deployments/desktop/desktop/latest?version=2.9.4&env=production
+[01-11-21 16:55:07] info: Program: Fetching update information, downloading from https://central.github.com/api/deployments/desktop/desktop/latest?version=2.9.4&env=production
+[01-11-21 16:55:07] info: CheckForUpdateImpl: Using existing staging user ID: 6824a971-a37b-5e93-b18f-abc409a0a7d7
+[01-11-21 16:55:07] info: CheckForUpdateImpl: Downloading RELEASES file from https://central.github.com/api/deployments/desktop/desktop/latest?version=2.9.4&env=production
+[01-11-21 16:55:07] info: FileDownloader: Downloading url: https://central.github.com/api/deployments/desktop/desktop/latest/RELEASES?version=2.9.4&env=production&id=GitHubDesktop&localVersion=2.9.4&arch=amd64
+[01-11-21 16:55:08] info: Program: Finished Squirrel Updater
