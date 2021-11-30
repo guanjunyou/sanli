@@ -347,7 +347,7 @@ echo $form->checkBoxList($model, 'admin_level',
 */
     public static function downList($datalist,$idname,$showname,$selectname,$pvalue='0') {
       $html='<select name="'.$selectname.'">';
-      $html.='<option value="">請選擇</option>';
+      $html.='<option value="">请选择</option>';
       foreach($datalist as $v){
        $html.='<option value="'.$v[$idname].'"'.(($v[$idname]==$pvalue) ? ' selected >' :'>');
        $html.=$v[$showname].'</option>';

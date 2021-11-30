@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--><html class="no-js" lang="zh-cn"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>後臺管理系統</title>
+    <title>后台管理系统</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -25,8 +25,8 @@
         <div class="logo"><a href="<?php echo Yii::app()->homeUrl;?>"><img src="<?php echo SITE_PATH;?>/static/admin/img/logo.png"></a></div>
         <a class="btn-menu" href="#"><i class="fa fa-reorder"></i></a>
         <ul class="nav">
-            <li ><a href="#">管理系統</a></li>            
-            <li><a href="#" target="_blank"> <span>操作員：<?php echo Yii::app()->session['name'];?></span></a></li>
+            <li ><a href="#">管理系统</a></li>            
+            <li><a href="#" target="_blank"> <span>操作员：<?php echo Yii::app()->session['name'];?></span></a></li>
         </ul><!--nav end-->
         <ul class="tool">
             <li><a href="<?php echo SITE_PATH;?>/" target="_blank"><i class="fa fa-home"></i> <span>网站首页</span></a></li>
