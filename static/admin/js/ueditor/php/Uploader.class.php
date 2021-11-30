@@ -99,7 +99,7 @@ class Uploader
         $this->fileType = $this->getFileExt();
         $filestream = stream_context_create($options);
         //http://gf41.net:8080/FileUploader/fileUpload
-        $json_rs = file_get_contents('http://127.0.0.1/hsyii/uploads/temp?fileCode=&fileType=' . substr($this->fileType,1), false, $filestream);
+        /*$json_rs = file_get_contents('http://127.0.0.1/hsyii/uploads/temp?fileCode=&fileType=' . substr($this->fileType,1), false, $filestream);
         $rs = json_decode($json_rs, true);
         //print_r($rs);exit;
         if($rs['code']==0){
@@ -117,7 +117,7 @@ class Uploader
         }else{
             $this->stateInfo = $this->stateMap[15];
         }
-        return ;
+        return ;*/
         //////////////////////////////////////////////////////////////////////////////////
 
         $this->oriName = $file['name'];
@@ -349,6 +349,7 @@ class Uploader
             $fullname = '/' . $fullname;
         }
 
+        
         return $rootPath . $fullname;
     }
 
