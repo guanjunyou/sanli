@@ -63,6 +63,8 @@
 <?php 
 $index = 1;
 foreach($arclist as $v){ 
+    if(($_REQUEST['news_type']==1) && ($v->status==0)) continue;
+    else{
 ?>
 <tr>
     <td class="check check-item"><input class="input-check" type="checkbox" value="<?php echo CHtml::encode($v->id); ?>"></td>
@@ -75,14 +77,26 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->registrationstartdate; ?></td>
     <td style='text-align: center;'><?php echo $v->registrationenddate; ?></td>
     <td style='text-align: center;'><?php echo BaseLib::model()->show_pic($v->imagesurl);?></td>
-    <td style='text-align: center;'><?php echo $v->status; ?></td>
+    <td style='text-align: center;'><?php switch($v->status){
+                                                                    case 0:echo "保存";
+                                                                    break;
+                                                                    case 1:echo "提交审核";
+                                                                    break;
+                                                                    case 2:echo "驳回";
+                                                                    break;
+                                                                    case 3:echo "审核通过";
+                                                                    break;
+                                                                    default:
+                                                                    echo "";
+                                                                }
+     ?></td>
     <td style='text-align: center;'>
      
         <a class="btn" href="<?php echo $this->createUrl('update', array('id'=>$v->id,'news_type'=>Yii::app()->request->getParam('news_type')));?>" title="编辑"><i class="fa fa-edit"></i></a>
         <a class="btn" href="javascript:;" onclick="we.dele('<?php echo $v->id;?>', deleteUrl);" title="删除"><i class="fa fa-trash-o"></i></a>
     </td>
 </tr>
-<?php $index++; } ?>
+<?php $index++; }} ?>
                 </tbody>
             </table>
         </div><!--box-table end-->

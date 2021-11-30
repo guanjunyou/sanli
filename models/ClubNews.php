@@ -78,6 +78,19 @@ class ClubNews extends BaseModel {
 
     protected function beforeSave() {
         parent::beforeSave();
+         $status=$_POST['submitType'];
+         if($status=='shenhe')
+         {
+            $this->status=1;
+         }
+         else if($status=='queren')
+         {
+            
+         }
+         else
+         {
+            $this->status=0;
+         }
         // 圖文描述處理
         return true;
     }

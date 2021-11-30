@@ -118,7 +118,7 @@
                 <tr>
                     <td width="15%"><?php echo $form->labelEx($model, 'status'); ?></td>
                     <td width="35%">
-                        <?php echo $form->radioButtonList($model, 'status', ['通过'=>'通过','驳回'=>'驳回'], array('separator'=>'', 'template'=>'<span class="radio">{input} {label}</span> ')); ?>
+                        <?php echo $form->radioButtonList($model, 'status', [3=>'通过',2=>'驳回'], array('separator'=>'', 'template'=>'<span class="radio">{input} {label}</span> ')); ?>
                         <?php echo $form->error($model, 'status'); ?>
                     </td>
                     <td width="15%"><?php echo $form->labelEx($model, 'reasons_for_failure'); ?></td>
@@ -129,12 +129,18 @@
                 </tr>
             </table>
         </div>
-      <?php } ?>
+        <div class="box-detail-submit">
+          <button onclick="submitType='queren'" class="btn btn-blue" type="submit">确认</button>
+          <button class="btn" type="button" onclick="we.back();">取消</button>
+         </div>
+      <?php }
+      else { ?>
         <div class="box-detail-submit">
           <button onclick="submitType='baocun'" class="btn btn-blue" type="submit">保存</button>
           <button onclick="submitType='shenhe'" class="btn btn-blue" type="submit">提交审核</button>
           <button class="btn" type="button" onclick="we.back();">取消</button>
          </div>
+     <?php } ?>
          
     
             <?php $this->endWidget();?>
