@@ -1,0 +1,26 @@
+2021/12/01 09:27:55 [error] [php] file_get_contents(): Filename cannot be empty (D:\wamp64\www\sanli\admin\controllers\PublicController.php:66)
+Stack trace:
+#0 unknown(0): PublicController->actionUppic()
+#1 D:\wamp64\www\sanli\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#2 D:\wamp64\www\sanli\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 D:\wamp64\www\sanli\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\wamp64\www\sanli\framework\web\CController.php(286): PublicController->runAction()
+#5 D:\wamp64\www\sanli\framework\web\CController.php(265): PublicController->runActionWithFilters()
+#6 D:\wamp64\www\sanli\framework\web\CWebApplication.php(282): PublicController->run()
+#7 D:\wamp64\www\sanli\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\wamp64\www\sanli\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\wamp64\www\sanli\index.php(35): CWebApplication->run()
+REQUEST_URI=/sanli/index.php?r=public/uppic&savepath=&sitepath=&prefix=
+2021/12/01 09:28:24 [error] [php] file_get_contents(): Filename cannot be empty (D:\wamp64\www\sanli\admin\controllers\PublicController.php:66)
+Stack trace:
+#0 unknown(0): PublicController->actionUppic()
+#1 D:\wamp64\www\sanli\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#2 D:\wamp64\www\sanli\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 D:\wamp64\www\sanli\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\wamp64\www\sanli\framework\web\CController.php(286): PublicController->runAction()
+#5 D:\wamp64\www\sanli\framework\web\CController.php(265): PublicController->runActionWithFilters()
+#6 D:\wamp64\www\sanli\framework\web\CWebApplication.php(282): PublicController->run()
+#7 D:\wamp64\www\sanli\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\wamp64\www\sanli\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\wamp64\www\sanli\index.php(35): CWebApplication->run()
+REQUEST_URI=/sanli/index.php?r=public/uppic&savepath=&sitepath=&prefix=

@@ -12,6 +12,7 @@ $st="";
             'award_index317' => array('课程登记', 'ClubNews/index&news_type=0'),
             'award_index318' => array('课程审核', 'ClubNews/index&news_type=1'),
             'award_index319' => array('报名名单', 'SignList/index'),
+            'award_index320' => array('机构名称', 'ClubList/index'),
          ),
     ),
   );

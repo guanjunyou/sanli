@@ -20,7 +20,9 @@ class ClubNews extends BaseModel {
           array('registrationstartdate', 'required', 'message' => '{attribute} 不能為空'),
           array('registrationenddate', 'required', 'message' => '{attribute} 不能為空'),
           array('cost', 'required', 'message' => '{attribute} 不能為空'),
-          array('id,name,introduce,content,starttime,endtime,cost,imagesurl,typeid,type,registrationstartdate,registrationenddate,status,duration,f_year,f_term,reasons_for_failure','safe'),
+          //array('club_id', 'required', 'message' => '{attribute} 不能為空'),
+          //array('news_club_name', 'required', 'message' => '{attribute} 不能為空'),
+          array('id,name,introduce,content,starttime,endtime,cost,club_id,news_club_name,imagesurl,typeid,type,registrationstartdate,registrationenddate,status,duration,f_year,f_term,reasons_for_failure','safe'),
 
            // array('f_year,f_term,news_title,news_content_temp','safe'),
         );
@@ -59,7 +61,9 @@ class ClubNews extends BaseModel {
         'duration'=>'持续时间',
         'f_year'=>'学年',
         'f_term'=>'学期',
-        'reasons_for_failure'=>'驳回说明'
+        'reasons_for_failure'=>'驳回说明',
+        'club_id'=>'机构',
+        'news_club_name'=>'社区信息',
         );
     }
 

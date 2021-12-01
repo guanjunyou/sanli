@@ -96,6 +96,19 @@
                             <?php echo $form->error($model, 'imagesurl', $htmlOptions = array()); ?></div>
                         </td>
                     </tr>
+
+                                        <tr>
+                        <!--下面是选择机构-->
+                <td style="padding:10px;"><?php echo $form->labelEx($model, 'club_id'); ?></td>
+                        <td colspan="3">
+                            <?php echo $form->hiddenField($model, 'club_id', array('class' => 'input-text')); ?>
+                            <span id="club_box"><?php if($model->news_club_name!=null){?><span class="label-box"><?php echo $model->news_club_name;?></span><?php }?></span>
+                            <input id="club_select_btn" class="btn" type="button" value="选择">
+                            <?php echo $form->error($model, 'club_id', $htmlOptions = array()); ?>
+                        </td>
+<!--                         <td colspan="2">
+                        </td> -->
+                    </tr>
                     
                     <tr style="dispay:black;"><!--news_type=225時顯示-->
                         <td><?php echo $form->labelEx($model, 'content'); ?></td>
@@ -228,4 +241,27 @@ $(function(){
     
 
 });
+
+    // 選擇單位
+    var $club_box=$('#club_box');
+    var $ClubNews_club_id=$('#ClubNews_club_id');
+    $('#club_select_btn').on('click', function(){
+        $.dialog.data('club_id', 0);
+        $.dialog.open('<?php echo $this->createUrl("select/club", array('partnership_type'=>16));?>',{
+            id:'danwei',
+            lock:true,
+            opacity:0.3,
+            title:'选择具体内容',
+            width:'500px',
+            height:'60%',
+            close: function () {
+                //console.log($.dialog.data('club_id'));
+                if($.dialog.data('club_id')>0){
+                    club_id=$.dialog.data('club_id');
+                    $ClubNews_club_id.val($.dialog.data('club_id')).trigger('blur');
+                    $club_box.html('<span class="label-box">'+$.dialog.data('club_title')+'</span>');
+                }
+            }
+        });
+    });
 </script> 
