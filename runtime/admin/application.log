@@ -24,3 +24,25 @@ Stack trace:
 #8 D:\wamp64\www\sanli\framework\base\CApplication.php(185): CWebApplication->processRequest()
 #9 D:\wamp64\www\sanli\index.php(35): CWebApplication->run()
 REQUEST_URI=/sanli/index.php?r=public/uppic&savepath=&sitepath=&prefix=
+2021/12/01 10:25:12 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `club_list` `t` WHERE id= LIMIT 1.
+2021/12/01 10:25:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1' in F:\wamp64\www\sanli\framework\db\CDbCommand.php:543
+Stack trace:
+#0 F:\wamp64\www\sanli\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\wamp64\www\sanli\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryRow()
+#2 F:\wamp64\www\sanli\framework\db\ar\CActiveRecord.php(1464): CActiveRecord->query(Object(CDbCriteria))
+#3 F:\wamp64\www\sanli\admin\controllers\ClubNewsController.php(53): CActiveRecord->find('id=')
+#4 F:\wamp64\www\sanli\admin\controllers\ClubNewsController.php(41): ClubNewsController->saveData(Object(ClubNews), Array)
+#5 [internal function]: ClubNewsController->actionUpdate('2')
+#6 F:\wamp64\www\sanli\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ClubNewsController), Array)
+#7 F:\wamp64\www\sanli\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ClubNewsController), Object(ReflectionMethod), Array)
+#8 F:\wamp64\www\sanli\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 F:\wamp64\www\sanli\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 F:\wamp64\www\sanli\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 F:\wamp64\www\sanli\framework\web\CWebApplication.php(282): CController->run('update')
+#12 F:\wamp64\www\sanli\framework\web\CWebApplication.php(141): CWebApplication->runController('clubNews/update')
+#13 F:\wamp64\www\sanli\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 F:\wamp64\www\sanli\index.php(35): CApplication->run()
+#15 {main}
+REQUEST_URI=/sanli/index.php?r=clubNews/update&id=2&news_type=0
+HTTP_REFERER=http://127.0.0.1/sanli/index.php?r=clubNews/update&id=2&news_type=0
+---

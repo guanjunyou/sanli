@@ -50,7 +50,8 @@ class ClubNewsController extends BaseController {
     function saveData($model,$post) {
           $model->attributes =$post;
            $model->content=$post["news_content_temp"];
-           $model->news_club_name=ClubList::model()->find("id=".$model->club_id)->club_name;
+           if($model->club_id)
+            $model->news_club_name=ClubList::model()->find("id=".$model->club_id)->club_name;
            show_status($model->save(),'保存成功', get_cookie('_currentUrl_'),'保存失败');  
            
      }

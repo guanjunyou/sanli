@@ -78,17 +78,17 @@ foreach($arclist as $v){
     <td style='text-align: center;'><?php echo $v->registrationenddate; ?></td>
     <td style='text-align: center;'><?php echo BaseLib::model()->show_pic($v->imagesurl);?></td>
     <td style='text-align: center;'><?php switch($v->status){
-                                                                    case 0:echo "保存";
+                                                                case 0:echo "保存";
                                                                     break;
-                                                                    case 1:echo "提交审核";
+                                                                case 1:echo "提交审核";
                                                                     break;
-                                                                    case 2:echo "驳回";
+                                                                case 2:echo "驳回";
                                                                     break;
-                                                                    case 3:echo "审核通过";
+                                                                case 3:echo "审核通过";
                                                                     break;
-                                                                    default:
+                                                                default:
                                                                     echo "";
-                                                                }
+                                                            }
      ?></td>
     <td style='text-align: center;'>
      

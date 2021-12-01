@@ -170,13 +170,13 @@ function show_pic($flie='',$id=''){
         $html=empty($id)?'<div style="text-align:center">':
             '<div style="float: left; margin-right:10px" id="upload_pic_'.$id.'">';
         if(substr($flie,-3,3)=='pdf' || substr($flie,-4,4)=='docx' || substr($flie,-3,3)=='doc' 
-           || substr($flie,-3,3)=='zip' || substr($flie,-3,3)=='rar'||substr($flie,-3,3)=='jpg'||substr($flie,-3,3)=='gif'||substr($flie,-4,4)=='jpeg')
+           || substr($flie,-3,3)=='zip' || substr($flie,-3,3)=='rar'||substr($flie,-3,3)=='jpg'||substr($flie,-3,3)=='gif'||substr($flie,-4,4)=='jpeg'||substr($flie,-3,3)=='png')
         $html.= '<a href="'.$flie.'" target="_blank" title="点击查看">';
         else
            $html.= '<a href="https://z3.ax1x.com/2021/11/06/IMh0XT.png" target="_blank" title="格式错误">';
          //这里防止用户下载错误格式的文件，增加程序鲁棒性
 
-        $html.= substr($flie,-3,3)=='jpg'||substr($flie,-3,3)=='gif'||substr($flie,-4,4)=='jpeg'?
+        $html.= substr($flie,-3,3)=='png'||substr($flie,-3,3)=='jpg'||substr($flie,-3,3)=='gif'||substr($flie,-4,4)=='jpeg'?
             '<img src="'.$flie.'" style="max-height:80px; max-width:70px;">':'';
         $html.= substr($flie,-3,3)=='pdf'?
             '<img src="'.'/hsreport/uploads/image/pdf.png'.'" style="max-height:30px; max-width:20px;">':'';
@@ -188,7 +188,7 @@ function show_pic($flie='',$id=''){
             '<img src="'.'/hsreport/uploads/image/zip.png'.'" style="max-height:30px; max-width:20px;">':'';
          $html.= substr($flie,-3,3)=='rar'?
             '<img src="'.'/hsreport/uploads/image/rar.png'.'" style="max-height:30px; max-width:20px;">':'';
-         $html.= substr($flie,-4,4)!='docx' && substr($flie,-3,3)!='pdf' && substr($flie,-3,3)!='doc' && substr($flie,-3,3)!='zip' && substr($flie,-3,3)!='rar' && substr($flie,-3,3)!='jpg'&&substr($flie,-3,3)!='gif'&&substr($flie,-4,4)!='jpeg'?
+         $html.= substr($flie,-4,4)!='docx' && substr($flie,-3,3)!='pdf' && substr($flie,-3,3)!='doc' && substr($flie,-3,3)!='zip' && substr($flie,-3,3)!='rar' && substr($flie,-3,3)!='jpg'&&substr($flie,-3,3)!='gif'&&substr($flie,-4,4)!='jpeg'&&substr($flie,-3,3)!='png'?
             '<img src="'.'/hsreport/uploads/image/fail.png'.'" style="max-height:30px; max-width:20px;text-align:center;">'.'文件格式错误':'';
         $html.='</a></div>';
     }
